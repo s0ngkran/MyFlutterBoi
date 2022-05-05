@@ -14,12 +14,6 @@ class RegisterScreen extends StatelessWidget {
         GradientBackground(),
         Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: Common.appBar(
-            context,
-            'Sign Up',
-            Icons.arrow_back,
-            Colors.white,
-          ),
           body: Container(
             alignment: Alignment.center,
             padding: EdgeInsets.symmetric(horizontal: 35.0),

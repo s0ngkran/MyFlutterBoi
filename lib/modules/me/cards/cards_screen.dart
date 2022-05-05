@@ -39,12 +39,7 @@ class _CardsScreenState extends State<CardsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Common.appBar(
-        context,
-        'Cards',
-        Icons.arrow_back,
-        Colors.black,
-      ),
+      
       body: Container(
         margin: EdgeInsets.all(8.0),
         height: SizeConfig().screenHeight * .7,

@@ -13,12 +13,6 @@ class MyTestScreen extends StatelessWidget {
         GradientBackground(),
         Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: Common.appBar(
-            context,
-            'Page Title',
-            Icons.arrow_back,
-            Colors.white,
-          ),
           body: const Text('welcome to test page'),
         ),
       ],
