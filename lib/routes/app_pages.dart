@@ -27,12 +27,25 @@ class AppPages {
         GetPage(name: Routes.MYTEST, page: () => MyTestScreen()),
       ],
     ),
-    GetPage(
-        name: Routes.HOME,
-        page: () => HomeScreen(),
-        binding: HomeBinding(),
-        children: [
-          GetPage(name: Routes.CARDS, page: () => CardsScreen()),
-        ]),
+    GetPage(name: Routes.HOME, page: () => HomeScreen(), binding: HomeBinding(), children: [
+      GetPage(name: Routes.CARDS, page: () => CardsScreen()),
+    ]),
+    //////////////////
+    ///////////////
+    ///////////////
+    ///////////////
+    //////////////// this is how to use bindings builder
+    ///////////////
+    ///////////////
+    ///////////////
+    // GetPage(
+    //   name: '/auth',
+    //   page: () => AuthScreen(),
+    //   binding: BindingsBuilder(() {
+    //     Get.lazyPut<TestBoxCtl>(
+    //       () => TestBoxCtl(),
+    //     );
+    //   }),
+    // ),
   ];
 }
