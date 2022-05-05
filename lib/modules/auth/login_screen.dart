@@ -13,7 +13,7 @@ class LoginScreen extends StatelessWidget {
         GradientBackground(),
         Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: CommonWidget.appBar(
+          appBar: Common.appBar(
             context,
             'Sign In',
             Icons.arrow_back,
@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
                 return null;
               },
             ),
-            CommonWidget.rowHeight(),
+            Common.rowHeight(),
             InputField(
               controller: controller.loginPasswordController,
               keyboardType: TextInputType.emailAddress,
@@ -71,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                 return null;
               },
             ),
-            CommonWidget.rowHeight(height: 80),
+            Common.rowHeight(height: 80),
             BorderButton(
               text: 'Sign In',
               backgroundColor: Colors.white,

@@ -35,7 +35,7 @@ class AuthController extends GetxController {
     AppFocus.unfocus(context);
     if (registerFormKey.currentState!.validate()) {
       if (!registerTermsChecked) {
-        CommonWidget.toast('Please check the terms first.');
+        Common.toast('Please check the terms first.');
         return;
       }
 

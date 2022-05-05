@@ -23,15 +23,13 @@ class _CardsScreenState extends State<CardsScreen> {
       BankCard(cardBrand: 'VISA', cardNumber: '1111', cardNumberM: '1111'),
     );
     cards.add(
-      BankCard(
-          cardBrand: 'MasterCard', cardNumber: '2222', cardNumberM: '2222'),
+      BankCard(cardBrand: 'MasterCard', cardNumber: '2222', cardNumberM: '2222'),
     );
     cards.add(
       BankCard(cardBrand: 'VISA', cardNumber: '7777', cardNumberM: '7777'),
     );
     cards.add(
-      BankCard(
-          cardBrand: 'MasterCard', cardNumber: '8888', cardNumberM: '8888'),
+      BankCard(cardBrand: 'MasterCard', cardNumber: '8888', cardNumberM: '8888'),
     );
     cards.add(
       BankCard(cardBrand: 'VISA', cardNumber: '8765', cardNumberM: '8765'),
@@ -41,7 +39,7 @@ class _CardsScreenState extends State<CardsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CommonWidget.appBar(
+      appBar: Common.appBar(
         context,
         'Cards',
         Icons.arrow_back,
@@ -80,7 +78,7 @@ class _CardsScreenState extends State<CardsScreen> {
             print('Unbind card');
             Navigator.of(context).pop();
           }),
-          CommonWidget.rowHeight(height: 10.0),
+          Common.rowHeight(height: 10.0),
           _buildMenuButton('Cancel', Colors.grey, onTap: () {
             Navigator.of(context).pop();
           }),

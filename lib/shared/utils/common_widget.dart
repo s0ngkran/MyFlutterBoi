@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CommonWidget {
+class Common {
   static AppBar appBar(BuildContext context, String title, IconData? backIcon, Color color, {void Function()? callback}) {
     return AppBar(
       leading: backIcon == null

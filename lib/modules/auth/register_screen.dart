@@ -14,7 +14,7 @@ class RegisterScreen extends StatelessWidget {
         GradientBackground(),
         Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: CommonWidget.appBar(
+          appBar: Common.appBar(
             context,
             'Sign Up',
             Icons.arrow_back,
@@ -53,7 +53,7 @@ class RegisterScreen extends StatelessWidget {
                 return null;
               },
             ),
-            CommonWidget.rowHeight(),
+            Common.rowHeight(),
             InputField(
               controller: controller.registerPasswordController,
               keyboardType: TextInputType.emailAddress,
@@ -72,7 +72,7 @@ class RegisterScreen extends StatelessWidget {
                 return null;
               },
             ),
-            CommonWidget.rowHeight(),
+            Common.rowHeight(),
             InputField(
               controller: controller.registerConfirmPasswordController,
               keyboardType: TextInputType.emailAddress,
@@ -80,8 +80,7 @@ class RegisterScreen extends StatelessWidget {
               placeholder: 'Enter Password',
               password: true,
               validator: (value) {
-                if (controller.registerPasswordController.text !=
-                    controller.registerConfirmPasswordController.text) {
+                if (controller.registerPasswordController.text != controller.registerConfirmPasswordController.text) {
                   return 'Confirm Password is not consistence with Password.';
                 }
 
@@ -91,16 +90,15 @@ class RegisterScreen extends StatelessWidget {
                 return null;
               },
             ),
-            CommonWidget.rowHeight(height: 10.0),
+            Common.rowHeight(height: 10.0),
             AppCheckbox(
-              label:
-                  'I have read and agreed to the Terms & Conditions and Privay Policy of Demo.',
+              label: 'I have read and agreed to the Terms & Conditions and Privay Policy of Demo.',
               checked: controller.registerTermsChecked,
               onChecked: (val) {
                 controller.registerTermsChecked = val!;
               },
             ),
-            CommonWidget.rowHeight(height: 80),
+            Common.rowHeight(height: 80),
             BorderButton(
               text: 'Sign Up',
               backgroundColor: Colors.white,

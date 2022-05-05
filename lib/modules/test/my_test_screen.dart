@@ -13,7 +13,7 @@ class MyTestScreen extends StatelessWidget {
         GradientBackground(),
         Scaffold(
           backgroundColor: Colors.transparent,
-          appBar: CommonWidget.appBar(
+          appBar: Common.appBar(
             context,
             'Page Title',
             Icons.arrow_back,
@@ -48,7 +48,7 @@ class MyTestScreen extends StatelessWidget {
                 return null;
               },
             ),
-            CommonWidget.rowHeight(),
+            Common.rowHeight(),
             InputField(
               controller: controller.loginPasswordController,
               keyboardType: TextInputType.emailAddress,
@@ -67,7 +67,7 @@ class MyTestScreen extends StatelessWidget {
                 return null;
               },
             ),
-            CommonWidget.rowHeight(height: 80),
+            Common.rowHeight(height: 80),
             BorderButton(
               text: 'Sign In',
               backgroundColor: Colors.white,
