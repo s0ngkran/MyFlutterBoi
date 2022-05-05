@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 
 class CommonWidget {
-  static AppBar appBar(
-      BuildContext context, String title, IconData? backIcon, Color color,
-      {void Function()? callback}) {
+  static AppBar appBar(BuildContext context, String title, IconData? backIcon, Color color, {void Function()? callback}) {
     return AppBar(
       leading: backIcon == null
           ? null
@@ -36,14 +34,7 @@ class CommonWidget {
     return SizedBox(width: width);
   }
 
-  static void toast(String error) async {
-    await Fluttertoast.showToast(
-        msg: error,
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.BOTTOM,
-        timeInSecForIosWeb: 3,
-        backgroundColor: Colors.white,
-        textColor: Colors.black,
-        fontSize: 16.0);
+  static toast(String title) {
+    return Get.defaultDialog(title: title);
   }
 }
