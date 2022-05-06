@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -62,13 +64,13 @@ class BaseProvider {
 
   Future<Request?>? handleToken(Request request) async {
     var token = await StorageService.token(BoxAction.read);
-    var headers;
+    Map<String, String> headers;
     if (token == null) {
       Get.defaultDialog(title: 'Has no token');
       print('has no token; no api sent');
       return null;
     } else {
-      headers = {'Authorization': 'Token ${token}', 'Content-Type': 'application/json'};
+      headers = {'Authorization': 'Token $token', 'Content-Type': 'application/json'};
       request.headers.addAll(headers);
       return request;
     }
