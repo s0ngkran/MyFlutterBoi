@@ -12,4 +12,19 @@ class StorageService extends GetxService {
     print('box --$box');
     return res;
   }
+
+  static Future<String?> token(BoxAction action, {String? token}) async {
+    var box = Get.find<GetStorage>();
+    if (action == BoxAction.write) {
+      box.write(StorageKey.token, token ?? '');
+    } else if (action == BoxAction.read) {
+      return  box.read(StorageKey.token);
+    }
+  }
+}
+
+enum BoxAction { write, read }
+
+class StorageKey {
+  static const token = 'token';
 }
