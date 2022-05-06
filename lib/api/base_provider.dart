@@ -42,7 +42,7 @@ class BaseProvider {
     Map<String, String> headers;
     if (auth == true) {
       Request? requestX = await handleToken(request);
-      if (request == null) return null;
+      if (requestX == null) return null;
     } else {
       headers = {'Content-Type': 'application/json'};
       request.headers.addAll(headers);
