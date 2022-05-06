@@ -12,7 +12,8 @@ FutureOr<dynamic> responseInterceptor(Request request, Response response) async 
 
   if (response.statusCode != 200) {
     handleErrorStatus(response);
-    return;
+    // return;
+    return response;
   }
 
   return response;

@@ -1,6 +1,5 @@
 import 'dart:async';
 
-
 import '../models/models.dart';
 import '../models/response/users_response.dart';
 import 'api.dart';
@@ -17,7 +16,7 @@ class ApiRepository {
     }
   }
 
-  Future<RegisterResponse?> register(RegisterRequest data) async {
+  Future<RegisterResponse?> dummyRegister(RegisterRequest data) async {
     final res = await apiProvider.register('/api/register', data);
     if (res.statusCode == 200) {
       return RegisterResponse.fromJson(res.body);
@@ -30,11 +29,11 @@ class ApiRepository {
       return UsersResponse.fromJson(res.body);
     }
   }
+
   Future<DummyTestGetResponse?> dummyTestGet() async {
     final res = await apiProvider.getUsers('/get');
     if (res.statusCode == 200) {
       return DummyTestGetResponse.fromJson(res.body);
     }
   }
-  
 }

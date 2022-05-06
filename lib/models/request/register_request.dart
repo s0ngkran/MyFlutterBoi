@@ -9,13 +9,11 @@ class RegisterRequest {
   String email;
   String password;
 
-  factory RegisterRequest.fromRawJson(String str) =>
-      RegisterRequest.fromJson(json.decode(str));
+  factory RegisterRequest.fromRawJson(String str) => RegisterRequest.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory RegisterRequest.fromJson(Map<String, dynamic> json) =>
-      RegisterRequest(
+  factory RegisterRequest.fromJson(Map<String, dynamic> json) => RegisterRequest(
         email: json["email"],
         password: json["password"],
       );

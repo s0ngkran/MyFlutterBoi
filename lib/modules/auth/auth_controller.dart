@@ -39,7 +39,7 @@ class AuthController extends GetxController {
         return;
       }
 
-      final res = await apiRepository.register(
+      final res = await apiRepository.dummyRegister(
         RegisterRequest(
           email: registerEmailController.text,
           password: registerPasswordController.text,
