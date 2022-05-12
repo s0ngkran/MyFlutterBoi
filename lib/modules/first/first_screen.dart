@@ -47,7 +47,8 @@ class FirstScreen extends View<FirstCtl> {
                     controller: ctl.username,
                     labelText: 'Username',
                     validator: (text) {
-                      return 'fail';
+                      // return 'fail';
+                      return null;
                     },
                   ),
                   InputField(
@@ -59,7 +60,9 @@ class FirstScreen extends View<FirstCtl> {
                     },
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      ctl.login();
+                    },
                     child: const Text('Login'),
                   ),
                 ],

@@ -15,7 +15,7 @@ class InputField extends StatelessWidget {
     this.keyboardType = TextInputType.text,
     this.labelText = '',
     this.placeholder = '',
-    this.color = Colors.white,
+    this.color = Colors.black,
     this.fontSize = 22.0,
     this.obscureText = false,
     this.validator,
