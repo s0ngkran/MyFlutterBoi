@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService extends GetxService {
   Future<bool> init() async {
@@ -8,7 +7,9 @@ class StorageService extends GetxService {
     var res = await GetStorage.init();
     var box = Get.put(GetStorage());
 
+    // ignore: avoid_print
     print('init GetStorage res=$res');
+    // ignore: avoid_print
     print('box --$box');
     return res;
   }

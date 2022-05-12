@@ -14,7 +14,7 @@ void main() async {
   await DenpendencyInjection.init();
 
   runApp(App());
-  configLoading();
+  // configLoading();
 }
 
 class App extends StatelessWidget {
@@ -23,13 +23,13 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       enableLog: true,
-      initialRoute: Routes.SPLASH,
+      initialRoute: '/first',
       defaultTransition: Transition.fade,
       getPages: AppPages.routes,
       initialBinding: AppBinding(),
       smartManagement: SmartManagement.keepFactory,
       title: 'GetX Boilerplate',
-      theme: ThemeConfig.lightTheme,
+      // theme: ThemeConfig.lightTheme,
       locale: TranslationService.locale,
       fallbackLocale: TranslationService.fallbackLocale,
       translations: TranslationService(),
