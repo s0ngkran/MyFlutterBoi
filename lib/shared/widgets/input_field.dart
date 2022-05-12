@@ -7,17 +7,17 @@ class InputField extends StatelessWidget {
   final String placeholder;
   final Color color;
   final double fontSize;
-  final bool password;
+  final bool obscureText;
   final String? Function(String?)? validator;
 
-  InputField({
+   InputField({
     required this.controller,
     this.keyboardType = TextInputType.text,
     this.labelText = '',
     this.placeholder = '',
     this.color = Colors.white,
     this.fontSize = 22.0,
-    this.password = false,
+    this.obscureText = false,
     this.validator,
   });
 
@@ -61,7 +61,7 @@ class InputField extends StatelessWidget {
         fontWeight: FontWeight.normal,
       ),
       keyboardType: this.keyboardType,
-      obscureText: this.password,
+      obscureText: this.obscureText,
       autocorrect: false,
       validator: this.validator,
     );

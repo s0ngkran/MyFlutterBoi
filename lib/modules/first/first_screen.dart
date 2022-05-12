@@ -9,7 +9,6 @@ import 'first_ctl.dart';
 // ignore: must_be_immutable
 class FirstScreen extends View<FirstCtl> {
   // FirstScreen({Key? key}) : super(key: key);
-  // and responsive
 
   var allTexts = {
     const Locale('en', 'US'): {
@@ -21,6 +20,7 @@ class FirstScreen extends View<FirstCtl> {
     }
   };
   final Locale? locale = Get.locale;
+  // final
 
   FirstScreen({Key? key}) : super(key: key);
 
@@ -39,6 +39,32 @@ class FirstScreen extends View<FirstCtl> {
             const Text('width'),
             // Text('${ctl.width} width'),
             Text('text ${ctl.show.value} \n--locale${locale} \n--ts${Get.locale}'),
+            Form(
+              key: ctl.loginKey,
+              child: Column(
+                children: [
+                  InputField(
+                    controller: ctl.username,
+                    labelText: 'Username',
+                    validator: (text) {
+                      return 'fail';
+                    },
+                  ),
+                  InputField(
+                    controller: ctl.password,
+                    obscureText: true,
+                    labelText: 'Password',
+                    validator: (text) {
+                      return null;
+                    },
+                  ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Login'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
@@ -65,7 +91,7 @@ class FirstScreen extends View<FirstCtl> {
           label: text['menu_2'].toString(),
         ),
         BottomNavigationBarItem(
-          icon: FaIcon(FontAwesomeIcons.a),
+          icon: const FaIcon(FontAwesomeIcons.a),
           label: text['menu_2'].toString(),
         ),
       ],
