@@ -9,6 +9,7 @@ import 'first_ctl.dart';
 // ignore: must_be_immutable
 class FirstScreen extends View<FirstCtl> {
   // FirstScreen({Key? key}) : super(key: key);
+  // and responsive
 
   var allTexts = {
     const Locale('en', 'US'): {
