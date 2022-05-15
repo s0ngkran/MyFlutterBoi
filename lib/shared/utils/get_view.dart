@@ -60,25 +60,25 @@ abstract class View<T> extends StatelessWidget {
           if (screen == ScreenType.desktop) {
             return Obx(
               () {
-                return desktop();
+                return desktop(context);
               },
             );
           } else if (screen == ScreenType.tablet) {
             return Obx(
               () {
-                return tablet();
+                return tablet(context);
               },
             );
           } else if (screen == ScreenType.phone) {
             return Obx(
               () {
-                return phone();
+                return phone(context);
               },
             );
           } else {
             return Obx(
               () {
-                return desktop();
+                return desktop(context);
               },
             );
           }
@@ -93,19 +93,19 @@ abstract class View<T> extends StatelessWidget {
     // );
   }
 
-  desktop() {
-    return const Text('not support desktop');
+   desktop(BuildContext context) {
+    return const SafeArea(child: Text('not support desktop'));
   }
 
-  tablet() {
-    return const Text('not support tablet');
+   tablet(BuildContext context) {
+    return const SafeArea(child: Text('not support tablet'));
   }
 
-  phone() {
-    return const Text('not support phone');
+   phone(BuildContext context) {
+    return const SafeArea(child: Text('not support phone'));
   }
 
-  onBuild() {}
+  onBuild({BuildContext? context}) {}
 }
 
 enum ScreenType { desktop, tablet, phone }

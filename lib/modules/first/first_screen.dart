@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
+import '../../routes/app_pages.dart';
 import '../../shared/shared.dart';
 import '../../shared/utils/get_view.dart';
 import 'first_ctl.dart';
 
-// ignore: must_be_immutable
 class FirstScreen extends View<FirstCtl> {
-  // FirstScreen({Key? key}) : super(key: key);
+  FirstScreen({Key? key}) : super(key: key);
 
   var allTexts = {
     const Locale('en', 'US'): {
@@ -22,10 +22,8 @@ class FirstScreen extends View<FirstCtl> {
   final Locale? locale = Get.locale;
   // final
 
-  FirstScreen({Key? key}) : super(key: key);
-
   @override
-  phone() {
+  phone(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: Common.appBar(),
@@ -64,6 +62,12 @@ class FirstScreen extends View<FirstCtl> {
                       ctl.login();
                     },
                     child: const Text('Login'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      Get.toNamed(Routes.forTesting);
+                    },
+                    child: const Text('to testing page'),
                   ),
                 ],
               ),

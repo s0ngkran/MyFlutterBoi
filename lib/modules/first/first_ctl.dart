@@ -21,6 +21,7 @@ class FirstCtl extends MyCtl {
 
   getWidth() {
     width.value = Get.width;
+    // ignore: avoid_print
     print('new width');
   }
 
