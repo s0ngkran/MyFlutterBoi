@@ -51,7 +51,7 @@ class FirstScreen extends View<FirstCtl> {
                   ),
                   InputField(
                     controller: ctl.password,
-                    obscureText: true,
+                    // obscureText: true,
                     labelText: 'Password',
                     validator: (text) {
                       return null;

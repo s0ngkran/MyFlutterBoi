@@ -54,7 +54,7 @@ class InputField extends StatelessWidget {
         filled: true,
         isDense: true,
       ),
-      // controller: this.controller,
+      controller: controller,
       style: TextStyle(
         color: color,
         fontSize: fontSize,
