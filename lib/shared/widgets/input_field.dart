@@ -7,45 +7,45 @@ class InputField extends StatelessWidget {
   final String placeholder;
   final Color color;
   final double fontSize;
-  final bool obscureText;
+  final bool password;
   final String? Function(String?)? validator;
 
-   InputField({
+  const InputField({Key? key, 
     required this.controller,
     this.keyboardType = TextInputType.text,
     this.labelText = '',
     this.placeholder = '',
-    this.color = Colors.black,
+    this.color = Colors.white,
     this.fontSize = 22.0,
-    this.obscureText = false,
+    this.password = false,
     this.validator,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
         fillColor: Colors.transparent,
-        contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+        contentPadding: const EdgeInsets.symmetric(vertical: 10.0),
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: this.color,
+            color: color,
           ),
         ),
         enabledBorder: UnderlineInputBorder(
           borderSide: BorderSide(
-            color: this.color,
+            color: color,
           ),
         ),
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        labelText: this.labelText,
+        labelText: labelText,
         labelStyle: TextStyle(
           fontSize: fontSize - 2,
           color: color,
           height: 0.2,
           fontWeight: FontWeight.normal,
         ),
-        hintText: this.placeholder,
+        hintText: placeholder,
         hintStyle: TextStyle(
           fontSize: fontSize,
           color: color,
@@ -54,16 +54,16 @@ class InputField extends StatelessWidget {
         filled: true,
         isDense: true,
       ),
-      controller: this.controller,
+      // controller: this.controller,
       style: TextStyle(
         color: color,
         fontSize: fontSize,
         fontWeight: FontWeight.normal,
       ),
-      keyboardType: this.keyboardType,
-      obscureText: this.obscureText,
+      keyboardType: keyboardType,
+      obscureText: password,
       autocorrect: false,
-      validator: this.validator,
+      validator: validator,
     );
   }
 }
